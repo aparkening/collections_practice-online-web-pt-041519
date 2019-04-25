@@ -51,5 +51,10 @@ end
 
 # Add "s" to each word in the array, except for the 2nd element
 def add_s(array)
-index == 1 ? element : element + "s"
+  new_array = []
+  array.each_with_index do |element, index|
+    element << "s" if index != 1
+    new_array << element
+  end
+  new_array 
 end
